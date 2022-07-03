@@ -79,6 +79,33 @@
         sprite1.position.set(-12,3,12); //位置を指定
         scene.add(sprite1);
         
+         // 青龍をスプライトで作成
+        var seiryuTexture = textureLoader.load("fantasy_seiryu.png");
+        const seiryuMaterial = new THREE.SpriteMaterial({ map: seiryuTexture,});
+        
+        const sprite2 = new THREE.Sprite(seiryuMaterial);
+        sprite2.scale.set(5,5,5);
+        sprite2.position.set(12,3,-12); //位置を指定
+        scene.add(sprite2);
+        
+         // 朱雀をスプライトで作成
+        var suzakuTexture = textureLoader.load("youkai_suzaku.png");
+        const suzakuMaterial = new THREE.SpriteMaterial({ map: suzakuTexture,});
+        
+        const sprite3 = new THREE.Sprite(suzakuMaterial);
+        sprite3.scale.set(5,5,5);
+        sprite3.position.set(12,3,12); //位置を指定
+        scene.add(sprite3);
+        
+         // 玄武をスプライトで作成
+        var genbuTexture = textureLoader.load("fantasy_genbu.png");
+        const genbuMaterial = new THREE.SpriteMaterial({ map: genbuTexture,});
+        
+        const sprite4 = new THREE.Sprite(genbuMaterial);
+        sprite4.scale.set(5,5,5);
+        sprite4.position.set(-12,3,-12); //位置を指定
+        scene.add(sprite4);
+        
         // 階段構成
           // 板cube, cube2
           // 階段単体stairs_x
