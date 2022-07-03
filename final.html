@@ -228,6 +228,13 @@
         //全体のオブジェクト
         const all = new THREE.Group();
         all.add(plane);//平面を追加
+        all.add(stairs);
+        all.add(sprite1);
+        all.add(sprite2);
+        all.add(sprite3);
+        all.add(sprite4);
+        
+        
         all.position.set(0,0,0);//全体グループの原点の位置
         scene.add(all); 
 
@@ -240,9 +247,6 @@
           renderer.render(scene, camera);
           requestAnimationFrame(update);
 
-          // 全体を回転させる
-          //all.rotation.x += 0.01;
-          //all.rotation.y += 0.005;;
           stairs.rotation.x += 0.002;
           stairs.rotation.y += 0.002;
           stairs.rotation.z += 0.002;
@@ -250,6 +254,9 @@
           radian2 += 0.001;
           stairs.position.x = 10 * Math.sin(radian2);
           stairs.position.z = 10 * Math.cos(radian2);
+          
+          // 全体を回転させる
+          all.rotation.x += 0.001;
         }
       }
     </script>
