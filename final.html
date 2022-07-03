@@ -60,7 +60,7 @@
         
         var hight = textureLoader.load("Concrete_Blocks_005_SD/Concrete_Blocks_005_hight.png");
         mat.displacementMap = hight;
-
+        mat.displacementScale = 0.5;
 
         // 平面を作成
        var planeGeometry = new THREE.PlaneGeometry(30,30,10,10); //縦、横、分割数、分割数
