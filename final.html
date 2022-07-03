@@ -63,7 +63,7 @@
 //         mat.displacementScale = 0.5;
 
         // 平面を作成
-       var planeGeometry = new THREE.PlaneGeometry(30,30,512,512); //縦、横、分割数、分割数
+       var planeGeometry = new THREE.PlaneGeometry(30,30,1024,1024); //縦、横、分割数、分割数
         // var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
         var plane = new THREE.Mesh(planeGeometry, mat);
         plane.rotation.set( -Math.PI/2, 0, 0 );
