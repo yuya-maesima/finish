@@ -61,12 +61,12 @@
         // mat.bumpscale = 0.2;
 
         // 平面を作成
-        var planeGeometry = new THREE.PlaneGeometry(30,30,10,10); //縦、横、分割数、分割数
+        var sphereGeometry = new THREE.SphereGeometry(15, 32, 32); //縦、横、分割数、分割数
         // var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
-        var plane = new THREE.Mesh(planeGeometry, mat);
-        plane.rotation.set( -Math.PI/2, 0, 0 );
-        plane.position.set(0,0,0);
-        scene.add(plane);
+        var sphere = new THREE.Mesh(planeGeometry, mat);
+        // sphere.rotation.set( -Math.PI/2, 0, 0 );
+        sphere.position.set(0,0,0);
+        scene.add(sphere);
         
 
         // 階段構成
