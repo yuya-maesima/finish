@@ -55,10 +55,9 @@
         var mat = new THREE.MeshStandardMaterial();
         mat.map = texture;
 
-        // // バンプマップ読み込み
-        // var bump = textureLoader.load("stone-bump.jpg");
-        // mat.bumpMap = bump;
-        // mat.bumpscale = 0.2;
+        var normal = textureLoader.load("Concrete_Blocks_005_SD/Concrete_Blocks_005_normal.jpg");
+        mat.normalMap = normal;
+//         mat.bumpscale = 0.2;
 
         // 平面を作成
        var planeGeometry = new THREE.PlaneGeometry(30,30,10,10); //縦、横、分割数、分割数
