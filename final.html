@@ -82,7 +82,7 @@
         // var planeMaterial = new THREE.MeshBasicMaterial({color: 0x00ff00});
         var plane = new THREE.Mesh(planeGeometry, mat);
         plane.receiveShadow = true;
-        plane.castShadow = true;
+//         plane.castShadow = true;
         plane.rotation.set( -Math.PI/2, 0, 0 );
         plane.position.set(0,0,0);
         scene.add(plane);
@@ -146,12 +146,14 @@
             // 縦板を作成
             const geometry = new THREE.BoxGeometry( size, size, 0.05 );
             const cube = new THREE.Mesh( geometry, material );
+            cube.castShadow = true;
             cube.position.set(0, (i * size), (i * size));
             stairs_1.add(cube);
             
             // 横板を作成
             const geometry2 = new THREE.BoxGeometry( size, 0.05, size );
             const cube2 = new THREE.Mesh( geometry2, material2 );
+            cube2.castShadow = true; 
             cube2.position.set(0, (size / 2) + (i * size), (size / 2) + (i * size));
             stairs_1.add(cube2);
         }
@@ -165,6 +167,7 @@
             const geometry = new THREE.BoxGeometry( size, size, 0.05 );
             // const material = new THREE.MeshPhongMaterial( {color: 0xb92946} );
             const cube = new THREE.Mesh( geometry, material );
+            cube.castShadow = true;
             cube.position.set(0, (i * size), (i * size));
             stairs_2.add(cube);
             
@@ -172,6 +175,7 @@
             const geometry2 = new THREE.BoxGeometry( size, 0.05, size );
             // const material2 = new THREE.MeshPhongMaterial( {color: 0x000000} );
             const cube2 = new THREE.Mesh( geometry2, material2 );
+            cube2.castShadow = true;
             cube2.position.set(0, (size / 2) + (i * size), (size / 2) + (i * size));
             stairs_2.add(cube2);
         }
@@ -187,6 +191,7 @@
           const geometry2 = new THREE.BoxGeometry( size, 0.05, size );
           // const material2 = new THREE.MeshPhongMaterial( {color: 0x000000} );
           const cube2 = new THREE.Mesh( geometry2, material2 );
+          cube2.castShadow = true;
           cube2.position.set(0, (i * size), (i * size));
           stairs_3.add(cube2);
 
@@ -194,6 +199,7 @@
           const geometry = new THREE.BoxGeometry( size, size, 0.05 );
           // const material = new THREE.MeshPhongMaterial( {color: 0xb92946} );
           const cube = new THREE.Mesh( geometry, material );
+          cube.castShadow = true;
           cube.position.set(0, (size / 2) + (i * size), (size / 2) + (i * size));
           stairs_3.add(cube);
         }
@@ -212,6 +218,7 @@
           const geometry2 = new THREE.BoxGeometry( size, 0.05, size );
           // const material2 = new THREE.MeshPhongMaterial( {color: 0x000000} );
           const cube2 = new THREE.Mesh( geometry2, material2 );
+          cube2.castShadow = true;
           cube2.position.set(0, (i * size), (i * size));
           stairs_4.add(cube2);
 
@@ -219,6 +226,7 @@
           const geometry = new THREE.BoxGeometry( size, size, 0.05 );
           // const material = new THREE.MeshPhongMaterial( {color: 0xb92946} );
           const cube = new THREE.Mesh( geometry, material );
+          cube.castShadow = true;
           cube.position.set(0, (size / 2) + (i * size), (size / 2) + (i * size));
           stairs_4.add(cube);
             
@@ -228,8 +236,8 @@
         stairs_4.position.z = size / -2;
         stairs.add(stairs_4);
         
-        stairs.receiveShadow = true;
-        stairs.castShadow = true;
+//         stairs.receiveShadow = true;
+        
 
         // グループ化の位置
         scene.add(stairs);
