@@ -70,14 +70,13 @@
         scene.add(plane);
         
 
-        // 木をスプライトで作成
+        // 白虎をスプライトで作成
         var byakkoTexture = textureLoader.load("youkai_byakko.png");
         const byakkoMaterial = new THREE.SpriteMaterial({ map: byakkoTexture,});
         
-        // 木左
         const sprite1 = new THREE.Sprite(byakkoMaterial);
-        sprite1.scale.set(1,2,1);
-        sprite1.position.set(-14,1,14); //位置を指定
+        sprite1.scale.set(10,10,10);
+        sprite1.position.set(-14,8,14); //位置を指定
         scene.add(sprite1);
         
         // 階段構成
