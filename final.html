@@ -57,7 +57,10 @@
 
         var normal = textureLoader.load("Concrete_Blocks_005_SD/Concrete_Blocks_005_normal.jpg");
         mat.normalMap = normal;
-//         mat.bumpscale = 0.2;
+        
+        var hight = textureLoader.load("Concrete_Blocks_005_SD/Concrete_Blocks_005_hight.png");
+        mat.displacementMap = hight;
+
 
         // 平面を作成
        var planeGeometry = new THREE.PlaneGeometry(30,30,10,10); //縦、横、分割数、分割数
