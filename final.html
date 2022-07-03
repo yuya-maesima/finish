@@ -42,6 +42,12 @@
         directionalLight2.position.set(-10, -10, 10);
         // シーンに追加
         scene.add(directionalLight2);
+        
+        // スポットライト光源を作成
+        // new THREE.SpotLight(色, 光の強さ, 距離, 照射角, ボケ具合, 減衰率)
+        const light = new THREE.SpotLight(0xFFFFFF, 1, 10, Math.PI / 4, 10, 0.5);
+        light.castShadow = true;
+        scene.add(light);
 
         // helper
         const gridHelper = new THREE.GridHelper(2,10); // size, step
@@ -223,6 +229,7 @@
 
         update();
 
+        var radian2 = 0;
         // 毎フレーム時に実行されるループイベントです
         function update() {
           // レンダリング
@@ -235,6 +242,10 @@
           stairs.rotation.x += 0.002;
           stairs.rotation.y += 0.002;
           stairs.rotation.z += 0.002;
+          
+          radian2 += 0.001;
+          stairs.position.x = 10 * Math.sin(radian2);
+          stairs.position.z = 10 * Math.cos(radian2);
         }
       }
     </script>
